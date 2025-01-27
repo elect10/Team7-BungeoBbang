@@ -1,10 +1,12 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
-import App from './App.tsx';
+import StudentApp from './domains/student/App';
+import AdminApp from './domains/admin/App';
+
+const hostname = window.location.hostname;
+const isAdmin = hostname.startsWith('admin');
 
 createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
+  <StrictMode>{isAdmin ? <AdminApp /> : <StudentApp />}</StrictMode>,
 );
