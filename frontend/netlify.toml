@@ -13,7 +13,7 @@
   force = true
 
 [[redirects]]
-  from = "https://www.on-u.com/*"
+  from = "https://on-u-test.netlify.app/*"
   to = "/student/index.html"
   status = 200
   force = true
