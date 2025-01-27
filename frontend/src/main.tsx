@@ -1,8 +1,8 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
-import StudentApp from './domains/student/App';
-import AdminApp from './domains/admin/App';
+import StudentApp from './domains/student/StudentApp';
+import AdminApp from './domains/admin/AdminApp';
 
 const hostname = window.location.hostname;
 const isAdmin = hostname.startsWith('admin');
