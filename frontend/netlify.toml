@@ -3,17 +3,14 @@
   publish = "dist"
   command = "npm run build"
 
-[context.production]
-  command = "npm run build"
-
 [[redirects]]
-  from = "https://admin.onu.com/*"
-  to = "/admin/index.html"
+  from = "https://admin.onu.com/*" 
+  to = "/index.html"
   status = 200
   force = true
 
 [[redirects]]
   from = "https://on-u-test.netlify.app/*"
-  to = "/student/index.html"
+  to = "/index.html"
   status = 200
   force = true
