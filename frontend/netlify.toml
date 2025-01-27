@@ -7,13 +7,13 @@
   command = "npm run build"
 
 [[redirects]]
-  from = "https://admin.myapp.com/*"
+  from = "https://admin.onu.com/*"
   to = "/admin/index.html"
   status = 200
   force = true
 
 [[redirects]]
-  from = "https://www.myapp.com/*"
+  from = "https://www.on-u.com/*"
   to = "/student/index.html"
   status = 200
   force = true
