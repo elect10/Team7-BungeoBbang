@@ -4,8 +4,7 @@ import { createRoot } from 'react-dom/client';
 import StudentApp from './domains/student/App.tsx';
 import AdminApp from './domains/admin/App.tsx';
 
-const hostname = window.location.hostname;
-const isAdmin = hostname.startsWith('admin');
+const isAdmin = window.location.pathname.startsWith('/admin');
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>{isAdmin ? <AdminApp /> : <StudentApp />}</StrictMode>,
