@@ -1,0 +1,19 @@
+[build]
+  base = "frontend"
+  publish = "dist"
+  command = "npm run build"
+
+[context.production]
+  command = "npm run build"
+
+[[redirects]]
+  from = "https://admin.myapp.com/*"
+  to = "/admin/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "https://www.myapp.com/*"
+  to = "/student/index.html"
+  status = 200
+  force = true
