@@ -7,10 +7,10 @@
   from = "https://admin.onu.com/*"
   to = "/index.html"
   status = 200
-  force = true
+  
 
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-  force = true
+  
