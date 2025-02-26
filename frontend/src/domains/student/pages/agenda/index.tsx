@@ -15,6 +15,7 @@ import useInfiniteScroll from '@/hooks/useInfiniteScroll';
 import { ChatEnterDialog } from './components/ChatEnterDialog';
 import { useSocketManager } from '@/hooks/useSocketManager';
 import { motion } from 'framer-motion';
+import { useCacheStore } from '@/store/cacheStore';
 
 const AgendaPage = () => {
   const MAX_PAGE_ITEMS = 6;
@@ -188,6 +189,8 @@ const AgendaPage = () => {
       {selectedChatRoomEnter && (
         <ChatEnterDialog
           onConfirm={() => {
+            const invalidateQueries = useCacheStore.getState().invalidateQueries;
+            invalidateQueries('my-agendas');
             enterChatRoom();
           }}
           onDismiss={() => setSelectedChatRoomEnter(null)}
