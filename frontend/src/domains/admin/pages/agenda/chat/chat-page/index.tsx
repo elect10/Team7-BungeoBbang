@@ -407,7 +407,6 @@ const ChatPage = forwardRef<HTMLDivElement, ChatPageProps>(
         }
 
         scrollToBottom();
-
         if (MAX_CHAT_DATA_LENGTH < chatData.length) {
           isLiveSendOverflow.current = true;
 
